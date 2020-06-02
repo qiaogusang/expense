@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<property name="USER_HOME" value="logs" />
+	<property name="FILE_NAME" value="api-logback" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-5level %X{uuid} %logger{35} - %msg %n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${USER_HOME}/${FILE_NAME}.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${USER_HOME}/${FILE_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+	        <maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %X{uuid} %logger{35} - %msg %n</pattern>
+		</encoder>
+	</appender>
+	
+	
+	<root level="info">
+		<appender-ref ref="STDOUT" /> 
+		<appender-ref ref="file" />
+	</root> 
+	
+</configuration>
