@@ -1,0 +1,22 @@
+server:
+  port: 8088
+  
+spring:
+  application:
+    name: expense
+  thymeleaf:
+    cache: false
+    
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
+  server:
+    port: 8081
