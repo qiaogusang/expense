@@ -1,45 +1,140 @@
-2020-05-29 14:30:43.606 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 5592 (E:\expense\target\classes started by Administrator in E:\expense) 
-2020-05-29 14:30:44.487 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
-2020-05-29 14:30:45.143 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
-2020-05-29 14:30:45.151 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
-2020-05-29 14:30:45.154 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
-2020-05-29 14:30:45.154 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
-2020-05-29 14:30:45.159 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
-2020-05-29 14:30:45.228 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
-2020-05-29 14:30:45.228 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 716 ms 
-2020-05-29 14:30:45.243 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
-2020-05-29 14:30:45.246 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
-2020-05-29 14:30:45.246 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
-2020-05-29 14:30:45.246 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
-2020-05-29 14:30:45.246 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
-2020-05-29 14:30:45.360 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
-2020-05-29 14:30:45.441 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
-2020-05-29 14:30:45.480 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
-2020-05-29 14:30:45.487 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
-2020-05-29 14:30:45.497 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
-2020-05-29 14:30:45.500 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 2.076 seconds (JVM running for 2.823) 
-2020-05-29 14:32:41.634 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2020-05-29 14:32:41.634 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
-2020-05-29 14:32:41.638 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms 
-2020-05-29 15:36:36.222 ERROR  o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ArrayIndexOutOfBoundsException: 1] with root cause 
-java.lang.ArrayIndexOutOfBoundsException: 1
-	at com.gusangyuan.expense.util.FileUtil.createFileAppendDate(FileUtil.java:47)
-	at com.gusangyuan.expense.web.RecordController.addRecord_version2(RecordController.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+2020-06-04 09:39:38.395 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.gusangyuan.expense.ExpenseApplicationTests], using SpringBootContextLoader 
+2020-06-04 09:39:38.410 INFO   o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.gusangyuan.expense.ExpenseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}. 
+2020-06-04 09:39:38.411 INFO   o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.gusangyuan.expense.ExpenseApplicationTests]: ExpenseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+2020-06-04 09:39:38.579 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.gusangyuan.expense.ExpenseApplication for test class com.gusangyuan.expense.ExpenseApplicationTests 
+2020-06-04 09:39:38.716 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2020-06-04 09:39:38.733 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@34f7234e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@753432a2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4983159f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@44e3a2b2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4c550889, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d2bd371, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@44040454, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@65fe9e33] 
+2020-06-04 09:39:39.131 INFO   c.g.expense.ExpenseApplicationTests - Starting ExpenseApplicationTests on XTZ-01905221424 with PID 12116 (started by Administrator in E:\expense) 
+2020-06-04 09:39:39.132 INFO   c.g.expense.ExpenseApplicationTests - No active profile set, falling back to default profiles: default 
+2020-06-04 09:39:41.087 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 09:39:41.518 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 09:39:41.736 INFO   c.g.expense.ExpenseApplicationTests - Started ExpenseApplicationTests in 2.932 seconds (JVM running for 4.943) 
+2020-06-04 09:40:16.395 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 09:41:25.814 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.gusangyuan.expense.ExpenseApplicationTests], using SpringBootContextLoader 
+2020-06-04 09:41:25.824 INFO   o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.gusangyuan.expense.ExpenseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}. 
+2020-06-04 09:41:25.826 INFO   o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.gusangyuan.expense.ExpenseApplicationTests]: ExpenseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+2020-06-04 09:41:26.014 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.gusangyuan.expense.ExpenseApplication for test class com.gusangyuan.expense.ExpenseApplicationTests 
+2020-06-04 09:41:26.152 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2020-06-04 09:41:26.174 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8692d67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@78f5c518, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@34f7234e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@753432a2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44e3a2b2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c550889] 
+2020-06-04 09:41:26.580 INFO   c.g.expense.ExpenseApplicationTests - Starting ExpenseApplicationTests on XTZ-01905221424 with PID 12360 (started by Administrator in E:\expense) 
+2020-06-04 09:41:26.580 INFO   c.g.expense.ExpenseApplicationTests - No active profile set, falling back to default profiles: default 
+2020-06-04 09:41:28.457 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 09:41:28.897 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 09:41:29.104 INFO   c.g.expense.ExpenseApplicationTests - Started ExpenseApplicationTests in 2.865 seconds (JVM running for 4.326) 
+2020-06-04 09:41:49.536 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 09:42:50.064 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.gusangyuan.expense.ExpenseApplicationTests], using SpringBootContextLoader 
+2020-06-04 09:42:50.074 INFO   o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.gusangyuan.expense.ExpenseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}. 
+2020-06-04 09:42:50.076 INFO   o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.gusangyuan.expense.ExpenseApplicationTests]: ExpenseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+2020-06-04 09:42:50.240 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.gusangyuan.expense.ExpenseApplication for test class com.gusangyuan.expense.ExpenseApplicationTests 
+2020-06-04 09:42:50.397 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2020-06-04 09:42:50.416 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8692d67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@78f5c518, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@34f7234e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@753432a2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44e3a2b2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c550889] 
+2020-06-04 09:42:50.814 INFO   c.g.expense.ExpenseApplicationTests - Starting ExpenseApplicationTests on XTZ-01905221424 with PID 8488 (started by Administrator in E:\expense) 
+2020-06-04 09:42:50.814 INFO   c.g.expense.ExpenseApplicationTests - No active profile set, falling back to default profiles: default 
+2020-06-04 09:42:52.765 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 09:42:53.218 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 09:42:53.424 INFO   c.g.expense.ExpenseApplicationTests - Started ExpenseApplicationTests in 2.947 seconds (JVM running for 4.402) 
+2020-06-04 09:43:35.944 INFO   c.g.expense.ExpenseApplicationTests - {"monthTotal":[4900,8],"yearTotal":4908} 
+2020-06-04 09:43:35.972 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:19:45.583 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.gusangyuan.expense.ExpenseApplicationTests], using SpringBootContextLoader 
+2020-06-04 10:19:45.590 INFO   o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.gusangyuan.expense.ExpenseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}. 
+2020-06-04 10:19:45.591 INFO   o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.gusangyuan.expense.ExpenseApplicationTests]: ExpenseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+2020-06-04 10:19:45.758 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.gusangyuan.expense.ExpenseApplication for test class com.gusangyuan.expense.ExpenseApplicationTests 
+2020-06-04 10:19:45.898 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2020-06-04 10:19:45.917 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8692d67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@78f5c518, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@34f7234e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@753432a2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44e3a2b2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c550889] 
+2020-06-04 10:19:46.345 INFO   c.g.expense.ExpenseApplicationTests - Starting ExpenseApplicationTests on XTZ-01905221424 with PID 12740 (started by Administrator in E:\expense) 
+2020-06-04 10:19:46.346 INFO   c.g.expense.ExpenseApplicationTests - No active profile set, falling back to default profiles: default 
+2020-06-04 10:19:48.220 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:19:48.626 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 10:19:48.846 INFO   c.g.expense.ExpenseApplicationTests - Started ExpenseApplicationTests in 2.854 seconds (JVM running for 4.272) 
+2020-06-04 10:19:58.542 INFO   c.g.expense.ExpenseApplicationTests - {"monthTotal":{"/E:/expense/05":4900,"/E:/expense/06":8},"yearTotal":4908} 
+2020-06-04 10:19:58.569 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:20:45.421 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.gusangyuan.expense.ExpenseApplicationTests], using SpringBootContextLoader 
+2020-06-04 10:20:45.430 INFO   o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.gusangyuan.expense.ExpenseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}. 
+2020-06-04 10:20:45.431 INFO   o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.gusangyuan.expense.ExpenseApplicationTests]: ExpenseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+2020-06-04 10:20:45.598 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.gusangyuan.expense.ExpenseApplication for test class com.gusangyuan.expense.ExpenseApplicationTests 
+2020-06-04 10:20:45.730 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2020-06-04 10:20:45.746 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8692d67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@78f5c518, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@34f7234e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@753432a2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@44e3a2b2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c550889] 
+2020-06-04 10:20:46.156 INFO   c.g.expense.ExpenseApplicationTests - Starting ExpenseApplicationTests on XTZ-01905221424 with PID 8560 (started by Administrator in E:\expense) 
+2020-06-04 10:20:46.157 INFO   c.g.expense.ExpenseApplicationTests - No active profile set, falling back to default profiles: default 
+2020-06-04 10:20:48.031 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:20:48.462 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 10:20:48.670 INFO   c.g.expense.ExpenseApplicationTests - Started ExpenseApplicationTests in 2.86 seconds (JVM running for 4.282) 
+2020-06-04 10:23:03.281 INFO   c.g.expense.ExpenseApplicationTests - {"monthTotal":{"/E:/expense/05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 10:23:03.310 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:23:39.395 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.gusangyuan.expense.ExpenseApplicationTests], using SpringBootContextLoader 
+2020-06-04 10:23:39.400 INFO   o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.gusangyuan.expense.ExpenseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}. 
+2020-06-04 10:23:39.401 INFO   o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.gusangyuan.expense.ExpenseApplicationTests]: ExpenseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+2020-06-04 10:23:39.500 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.gusangyuan.expense.ExpenseApplication for test class com.gusangyuan.expense.ExpenseApplicationTests 
+2020-06-04 10:23:39.584 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2020-06-04 10:23:39.596 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@158a8276, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c3d9b6b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@79d8407f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5fbe4146, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e66f1f5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4e50c791, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7530ad9c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@58a9760d, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@71e9ddb4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@394df057] 
+2020-06-04 10:23:39.887 INFO   c.g.expense.ExpenseApplicationTests - Starting ExpenseApplicationTests on XTZ-01905221424 with PID 18340 (started by Administrator in E:\expense) 
+2020-06-04 10:23:39.889 INFO   c.g.expense.ExpenseApplicationTests - No active profile set, falling back to default profiles: default 
+2020-06-04 10:23:41.185 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:23:41.413 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 10:23:41.549 INFO   c.g.expense.ExpenseApplicationTests - Started ExpenseApplicationTests in 1.908 seconds (JVM running for 2.741) 
+2020-06-04 10:23:41.781 INFO   c.g.expense.ExpenseApplicationTests - 当前天：false 
+2020-06-04 10:23:41.793 INFO   c.g.expense.ExpenseApplicationTests - 文件地址是否存在：false 
+2020-06-04 10:23:41.794 INFO   c.g.expense.ExpenseApplicationTests - 文件路径：file 
+2020-06-04 10:23:41.794 INFO   c.g.expense.ExpenseApplicationTests - 合成文件路径：E:\file\2020 
+2020-06-04 10:23:41.799 INFO   c.g.expense.ExpenseApplicationTests - E:\expense\files\2020\05 
+2020-06-04 10:23:41.799 INFO   c.g.expense.ExpenseApplicationTests - E:\expense\files\2020\05\29.txt 
+2020-06-04 10:23:41.799 INFO   c.g.expense.ExpenseApplicationTests - E:\expense\files\2020\05\30.txt 
+2020-06-04 10:23:41.799 INFO   c.g.expense.ExpenseApplicationTests - E:\expense\files\2020\06 
+2020-06-04 10:23:41.799 INFO   c.g.expense.ExpenseApplicationTests - E:\expense\files\2020\06\03.txt 
+2020-06-04 10:23:41.853 INFO   c.g.expense.ExpenseApplicationTests - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 10:23:41.871 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:23:52.213 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.gusangyuan.expense.ExpenseApplicationTests], using SpringBootContextLoader 
+2020-06-04 10:23:52.220 INFO   o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.gusangyuan.expense.ExpenseApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}. 
+2020-06-04 10:23:52.221 INFO   o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.gusangyuan.expense.ExpenseApplicationTests]: ExpenseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration. 
+2020-06-04 10:23:52.321 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.gusangyuan.expense.ExpenseApplication for test class com.gusangyuan.expense.ExpenseApplicationTests 
+2020-06-04 10:23:52.404 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2020-06-04 10:23:52.414 INFO   o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7530ad9c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58a9760d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@71e9ddb4, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@394df057, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4961f6af, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5aebe890, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@65d09a04, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@33c911a1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@75db5df9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@707194ba] 
+2020-06-04 10:23:52.707 INFO   c.g.expense.ExpenseApplicationTests - Starting ExpenseApplicationTests on XTZ-01905221424 with PID 15200 (started by Administrator in E:\expense) 
+2020-06-04 10:23:52.708 INFO   c.g.expense.ExpenseApplicationTests - No active profile set, falling back to default profiles: default 
+2020-06-04 10:23:54.013 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 10:23:54.243 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 10:23:54.388 INFO   c.g.expense.ExpenseApplicationTests - Started ExpenseApplicationTests in 1.927 seconds (JVM running for 2.798) 
+2020-06-04 10:23:54.682 INFO   c.g.expense.ExpenseApplicationTests - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 10:23:54.701 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 11:03:25.448 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 14992 (E:\expense\target\classes started by Administrator in E:\expense) 
+2020-06-04 11:03:25.451 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
+2020-06-04 11:03:26.154 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
+2020-06-04 11:03:26.162 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
+2020-06-04 11:03:26.165 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2020-06-04 11:03:26.165 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
+2020-06-04 11:03:26.170 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
+2020-06-04 11:03:26.241 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2020-06-04 11:03:26.241 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 765 ms 
+2020-06-04 11:03:26.258 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+2020-06-04 11:03:26.262 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2020-06-04 11:03:26.263 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2020-06-04 11:03:26.263 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
+2020-06-04 11:03:26.263 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2020-06-04 11:03:26.396 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 11:03:26.482 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 11:03:26.535 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
+2020-06-04 11:03:26.541 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2020-06-04 11:03:26.551 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
+2020-06-04 11:03:26.554 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.337 seconds (JVM running for 2.068) 
+2020-06-04 11:03:52.535 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-06-04 11:03:52.536 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2020-06-04 11:03:52.539 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms 
+2020-06-04 11:09:06.203 ERROR  org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-8088-exec-1] Exception processing template "index": An error happened during template parsing (template: "class path resource [templates/index.html]") 
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
@@ -79,155 +174,181 @@ java.lang.ArrayIndexOutOfBoundsException: 1
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
-2020-05-29 16:06:45.031 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
-2020-05-29 16:06:45.033 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:08:27.189 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 16544 (E:\expense\target\classes started by Administrator in E:\expense) 
-2020-05-29 16:08:27.191 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
-2020-05-29 16:08:27.841 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
-2020-05-29 16:08:27.849 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:08:27.853 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
-2020-05-29 16:08:27.853 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
-2020-05-29 16:08:27.858 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
-2020-05-29 16:08:27.923 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
-2020-05-29 16:08:27.924 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 709 ms 
-2020-05-29 16:08:27.938 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
-2020-05-29 16:08:27.941 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
-2020-05-29 16:08:27.941 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
-2020-05-29 16:08:27.941 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
-2020-05-29 16:08:27.941 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
-2020-05-29 16:08:28.054 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:08:28.131 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
-2020-05-29 16:08:28.179 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:08:28.185 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
-2020-05-29 16:08:28.195 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
-2020-05-29 16:08:28.198 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.195 seconds (JVM running for 1.855) 
-2020-05-29 16:08:37.187 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2020-05-29 16:08:37.187 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
-2020-05-29 16:08:37.193 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms 
-2020-05-29 16:11:54.075 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
-2020-05-29 16:11:54.077 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:34:39.095 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 9288 (E:\expense\target\classes started by Administrator in E:\expense) 
-2020-05-29 16:34:39.099 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
-2020-05-29 16:34:39.940 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
-2020-05-29 16:34:39.952 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:34:39.956 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
-2020-05-29 16:34:39.956 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
-2020-05-29 16:34:39.972 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Java\jdk1.8.0_111\jre\bin;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
-2020-05-29 16:34:40.049 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
-2020-05-29 16:34:40.050 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 912 ms 
-2020-05-29 16:34:40.069 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
-2020-05-29 16:34:40.073 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
-2020-05-29 16:34:40.074 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
-2020-05-29 16:34:40.074 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
-2020-05-29 16:34:40.074 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
-2020-05-29 16:34:40.228 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:34:40.335 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
-2020-05-29 16:34:40.386 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:34:40.394 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
-2020-05-29 16:34:40.410 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
-2020-05-29 16:34:40.414 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.567 seconds (JVM running for 2.938) 
-2020-05-29 16:34:47.646 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2020-05-29 16:34:47.646 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
-2020-05-29 16:34:47.651 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms 
-2020-05-29 16:40:20.324 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
-2020-05-29 16:40:20.327 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:40:43.323 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 10980 (E:\expense\target\classes started by Administrator in E:\expense) 
-2020-05-29 16:40:43.325 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
-2020-05-29 16:40:43.961 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
-2020-05-29 16:40:43.969 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:40:43.972 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
-2020-05-29 16:40:43.973 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
-2020-05-29 16:40:43.977 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
-2020-05-29 16:40:44.039 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
-2020-05-29 16:40:44.040 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 691 ms 
-2020-05-29 16:40:44.056 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
-2020-05-29 16:40:44.058 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
-2020-05-29 16:40:44.059 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
-2020-05-29 16:40:44.059 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
-2020-05-29 16:40:44.059 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
-2020-05-29 16:40:44.171 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:40:44.252 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
-2020-05-29 16:40:44.301 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:40:44.308 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
-2020-05-29 16:40:44.318 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
-2020-05-29 16:40:44.320 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.185 seconds (JVM running for 1.823) 
-2020-05-29 16:41:17.361 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2020-05-29 16:41:17.361 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
-2020-05-29 16:41:17.365 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms 
-2020-05-29 16:50:16.481 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
-2020-05-29 16:50:16.483 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:50:36.270 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 16492 (E:\expense\target\classes started by Administrator in E:\expense) 
-2020-05-29 16:50:36.272 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
-2020-05-29 16:50:36.909 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
-2020-05-29 16:50:36.917 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:50:36.921 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
-2020-05-29 16:50:36.921 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
-2020-05-29 16:50:36.926 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
-2020-05-29 16:50:36.993 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
-2020-05-29 16:50:36.993 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 697 ms 
-2020-05-29 16:50:37.009 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
-2020-05-29 16:50:37.011 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
-2020-05-29 16:50:37.012 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
-2020-05-29 16:50:37.012 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
-2020-05-29 16:50:37.012 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
-2020-05-29 16:50:37.131 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:50:37.213 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
-2020-05-29 16:50:37.262 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:50:37.270 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
-2020-05-29 16:50:37.282 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
-2020-05-29 16:50:37.284 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.204 seconds (JVM running for 1.853) 
-2020-05-29 16:50:49.402 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2020-05-29 16:50:49.402 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
-2020-05-29 16:50:49.407 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms 
-2020-05-29 16:58:20.086 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
-2020-05-29 16:58:20.088 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:58:28.093 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 3148 (E:\expense\target\classes started by Administrator in E:\expense) 
-2020-05-29 16:58:28.095 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
-2020-05-29 16:58:28.756 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
-2020-05-29 16:58:28.765 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:58:28.768 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
-2020-05-29 16:58:28.768 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
-2020-05-29 16:58:28.773 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
-2020-05-29 16:58:28.834 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
-2020-05-29 16:58:28.834 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 715 ms 
-2020-05-29 16:58:28.849 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
-2020-05-29 16:58:28.852 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
-2020-05-29 16:58:28.852 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
-2020-05-29 16:58:28.852 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
-2020-05-29 16:58:28.852 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
-2020-05-29 16:58:28.970 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
-2020-05-29 16:58:29.052 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
-2020-05-29 16:58:29.102 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
-2020-05-29 16:58:29.110 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
-2020-05-29 16:58:29.120 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
-2020-05-29 16:58:29.122 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.216 seconds (JVM running for 1.877) 
-2020-05-29 16:58:41.348 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2020-05-29 16:58:41.349 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
-2020-05-29 16:58:41.353 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms 
-2020-05-29 17:08:56.821 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
-2020-05-29 17:08:56.823 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
-2020-05-29 17:09:08.476 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 16536 (E:\expense\target\classes started by Administrator in E:\expense) 
-2020-05-29 17:09:08.478 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
-2020-05-29 17:09:09.119 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
-2020-05-29 17:09:09.127 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
-2020-05-29 17:09:09.131 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
-2020-05-29 17:09:09.131 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
-2020-05-29 17:09:09.136 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
-2020-05-29 17:09:09.199 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
-2020-05-29 17:09:09.199 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 697 ms 
-2020-05-29 17:09:09.216 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
-2020-05-29 17:09:09.219 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
-2020-05-29 17:09:09.219 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
-2020-05-29 17:09:09.219 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
-2020-05-29 17:09:09.219 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
-2020-05-29 17:09:09.334 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
-2020-05-29 17:09:09.416 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
-2020-05-29 17:09:09.467 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
-2020-05-29 17:09:09.474 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
-2020-05-29 17:09:09.483 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
-2020-05-29 17:09:09.486 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.198 seconds (JVM running for 1.84) 
-2020-05-29 17:09:18.839 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
-2020-05-29 17:09:18.839 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
-2020-05-29 17:09:18.844 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms 
-2020-05-29 17:28:36.739 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
-2020-05-29 17:28:36.741 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+Caused by: org.attoparser.ParseException: Could not parse as expression: "年：${year}" (template: "index" - line 10, col 8)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 52 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "年：${year}" (template: "index" - line 10, col 8)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 54 common frames omitted
+2020-06-04 11:09:06.205 ERROR  o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")] with root cause 
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "年：${year}" (template: "index" - line 10, col 8)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1370)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1116)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1055)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020-06-04 11:11:51.367 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2020-06-04 11:11:51.370 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 11:11:58.349 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 6788 (E:\expense\target\classes started by Administrator in E:\expense) 
+2020-06-04 11:11:58.351 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
+2020-06-04 11:11:58.990 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
+2020-06-04 11:11:58.998 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
+2020-06-04 11:11:59.001 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2020-06-04 11:11:59.001 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
+2020-06-04 11:11:59.005 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
+2020-06-04 11:11:59.066 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2020-06-04 11:11:59.066 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 691 ms 
+2020-06-04 11:11:59.080 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+2020-06-04 11:11:59.083 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2020-06-04 11:11:59.084 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2020-06-04 11:11:59.084 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
+2020-06-04 11:11:59.084 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2020-06-04 11:11:59.210 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 11:11:59.287 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 11:11:59.332 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
+2020-06-04 11:11:59.338 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2020-06-04 11:11:59.349 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
+2020-06-04 11:11:59.351 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.225 seconds (JVM running for 1.929) 
+2020-06-04 11:12:10.007 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-06-04 11:12:10.007 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2020-06-04 11:12:10.011 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms 
+2020-06-04 11:12:10.073 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:12:55.220 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2020-06-04 11:12:55.222 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 
+2020-06-04 11:13:02.278 INFO   c.g.expense.ExpenseApplication - Starting ExpenseApplication on XTZ-01905221424 with PID 2108 (E:\expense\target\classes started by Administrator in E:\expense) 
+2020-06-04 11:13:02.282 INFO   c.g.expense.ExpenseApplication - No active profile set, falling back to default profiles: default 
+2020-06-04 11:13:03.203 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (http) 
+2020-06-04 11:13:03.213 INFO   o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"] 
+2020-06-04 11:13:03.216 INFO   o.a.catalina.core.StandardService - Starting service [Tomcat] 
+2020-06-04 11:13:03.216 INFO   o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12 
+2020-06-04 11:13:03.223 INFO   o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\Java\jdk1.8.0_111\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\Java\jdk1.8.0_111\jre\bin;D:/Java/jre.1.8.0_111/bin/server;D:/Java/jre.1.8.0_111/bin;D:/Java/jre.1.8.0_111/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\apache-maven-3.5.0\bin;C:\WINDOWS\System32\OpenSSH\;D:\mysql-8.0.15-winx64\bin;D:\Java\jdk1.8.0_111\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\eclipse2019;;.] 
+2020-06-04 11:13:03.298 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2020-06-04 11:13:03.298 INFO   o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 979 ms 
+2020-06-04 11:13:03.320 INFO   o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/] 
+2020-06-04 11:13:03.324 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*] 
+2020-06-04 11:13:03.324 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2020-06-04 11:13:03.324 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*] 
+2020-06-04 11:13:03.324 INFO   o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*] 
+2020-06-04 11:13:03.496 INFO   o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor' 
+2020-06-04 11:13:03.625 INFO   o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index 
+2020-06-04 11:13:03.676 INFO   o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"] 
+2020-06-04 11:13:03.684 INFO   o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read 
+2020-06-04 11:13:03.702 INFO   o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (http) with context path '' 
+2020-06-04 11:13:03.707 INFO   c.g.expense.ExpenseApplication - Started ExpenseApplication in 1.753 seconds (JVM running for 2.752) 
+2020-06-04 11:13:07.431 INFO   o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020-06-04 11:13:07.432 INFO   o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2020-06-04 11:13:07.436 INFO   o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms 
+2020-06-04 11:13:15.720 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:15:06.109 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:16:11.550 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:16:26.124 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:16:44.210 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:17:56.895 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:19:07.692 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:20:02.281 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:20:55.073 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:21:24.863 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:27:39.450 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:27:41.272 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:27:41.459 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:27:41.841 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:27:42.038 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:27:42.209 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:27:44.017 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:29:30.696 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:29:44.139 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:29:45.420 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":8},"yearTotal":4908} 
+2020-06-04 11:30:16.821 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":9},"yearTotal":4909} 
+2020-06-04 11:30:18.068 INFO   c.g.expense.service.ShowHandler - {"monthTotal":{"05":4900,"06":9},"yearTotal":4909} 
+2020-06-04 14:14:26.384 INFO   o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2020-06-04 14:14:26.386 INFO   o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor' 

@@ -6,11 +6,13 @@
 </head>
 
 <body>
-<a href="http://localhost:8088/show">show details</a>
+<a href="http://localhost:8088/show">Show Detail</a>
+<p>
+<label th:text="'年度：'+${year}"></label>
+<ul th:each="entry:${months}">
+	<li th:text="${entry.key} + '：' + ${entry.value}"></li>
+</ul>
 <p>
 <a href="http://localhost:8088/add">Add</a>
-<list>
-	
-</list>
 </body>
 </html>

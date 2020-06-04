@@ -1,2 +1,2 @@
-event1->100
-event10->1000
+event1:100
+event10:1000

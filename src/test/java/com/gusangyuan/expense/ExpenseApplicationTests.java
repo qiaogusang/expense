@@ -1,16 +1,21 @@
 package com.gusangyuan.expense;
 
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.alibaba.fastjson.JSON;
+import com.gusangyuan.expense.service.ShowHandler;
 import com.gusangyuan.expense.util.DateUtil;
 import com.gusangyuan.expense.util.FileUtil;
 import com.gusangyuan.expense.util.StringUtil;
@@ -23,6 +28,9 @@ import lombok.extern.slf4j.Slf4j;
 public class ExpenseApplicationTests {
 
 	private String url = "e:\\aaa.txt";
+	
+	@Autowired
+	private ShowHandler handler;
 	
 	@Test
 	public void testPath() {
@@ -51,14 +59,25 @@ public class ExpenseApplicationTests {
 		
 		Path path = FileUtil.createFileAppendDate("E:\\file", "2020-05-28");
 		FileUtil.write(path, StringUtil.listToString(content, "\r\n"));
-		
 		log.info(FileUtil.read(path.toFile().getPath()).toString());
 	}
 	
 	@Test
 	public void testRead() throws Exception {
-		log.info(FileUtil.read(url).toString());
-		
+//		log.info(FileUtil.read(url).toString());
+		Path path = Paths.get("E:\\expense\\files\\2020");
+		Stream<Path> paths = FileUtil.fileList(path);
+		paths.forEach((e) -> {
+			log.info("{}", e);
+			try {
+				Stream<Path> list = FileUtil.fileList(e);
+				list.forEach(d -> log.info("{}", d));
+			} catch (IOException ex) {
+				// TODO Auto-generated catch block
+				ex.printStackTrace();
+			}
+			
+		});
 	}
 	
 	@Test
@@ -68,6 +87,12 @@ public class ExpenseApplicationTests {
 		log.info("当前月：{}", DateUtil.getCurrentMonth());
 		log.info("当前天：{}", DateUtil.getCurrentDay());*/
 		log.info("当前天：{}", DateUtil.formatDate("2020-219042", "yyyy-MM-dd"));
+	}
+	
+	@Test
+	public void testShow() throws IOException {
+		Path path = Paths.get("E:\\expense\\files\\2020");
+		log.info("{}", JSON.toJSON(handler.yearTotal(path)));
 	}
 
 }

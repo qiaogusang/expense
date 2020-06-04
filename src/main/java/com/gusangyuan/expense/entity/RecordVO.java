@@ -1,13 +1,12 @@
 package com.gusangyuan.expense.entity;
 
-import java.util.List;
+import java.util.Map;
 
 import lombok.Data;
 
 @Data
 public class RecordVO {
 
-	private String date;
-	private String content;
-	private List<Record> recordList;
+	private int total;
+	private Map<String, Integer> detail;
 }
