@@ -13,6 +13,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.StringUtils;
 
 import com.alibaba.fastjson.JSON;
 import com.gusangyuan.expense.service.ShowHandler;
@@ -27,20 +28,24 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootTest
 public class ExpenseApplicationTests {
 
-	private String url = "e:\\aaa.txt";
-	
 	@Autowired
 	private ShowHandler handler;
 	
 	@Test
 	public void testPath() {
-		Path path = Paths.get("E:\\file");
-		log.info("文件地址是否存在：{}", FileUtil.isPathExist(path));
+		Path path = Paths.get("E:\\expense\\files\\2020\\05\\29.txt");
+		log.info("文件地址是否存在：{}", path.toFile().isDirectory());
 		Iterator<Path> list = path.iterator();
+		Path p = null;
 		while(list.hasNext()) {
-			log.info("文件路径：{}", list.next());
+			p = list.next();
+//			log.info("文件路径：{}", list.next());
 		}
-		log.info("合成文件路径：{}", path.resolve("2020"));
+		log.info("文件路径：{}", p.toString());
+		String str = StringUtils.replace(p.toString(), ".txt", "");
+		log.info("文件路径2：{}", p.toFile().getPath());
+		log.info("文件路径3：{}", str);
+//		log.info("合成文件路径：{}", path.resolve("2020"));
 	}
 	
 	@Test
@@ -92,7 +97,7 @@ public class ExpenseApplicationTests {
 	@Test
 	public void testShow() throws IOException {
 		Path path = Paths.get("E:\\expense\\files\\2020");
-		log.info("{}", JSON.toJSON(handler.yearTotal(path)));
+		log.info("{}", JSON.toJSON(handler.total(path, "year")));
 	}
 
 }

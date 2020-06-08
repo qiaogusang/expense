@@ -1,6 +1,6 @@
 package com.gusangyuan.expense.entity;
 
-import java.util.Map;
+import java.util.List;
 
 import lombok.Data;
 
@@ -8,5 +8,7 @@ import lombok.Data;
 public class RecordVO {
 
 	private int total;
-	private Map<String, Integer> detail;
+	private String year;
+	private String month;
+	private List<PathBO> detail;
 }

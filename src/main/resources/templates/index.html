@@ -8,9 +8,10 @@
 <body>
 <a href="http://localhost:8088/show">Show Detail</a>
 <p>
-<label th:text="'年度：'+${year}"></label>
+<label th:text="${year} + '年度：' +${total}"></label>
 <ul th:each="entry:${months}">
-	<li th:text="${entry.key} + '：' + ${entry.value}"></li>
+	<li th:text="${entry.num} + '：' + ${entry.total}"></li>
+	<a th:href="@{'http://localhost:8088/show/month/'+${entry.num}+'?url='+${entry.path}}">Detail</a>
 </ul>
 <p>
 <a href="http://localhost:8088/add">Add</a>

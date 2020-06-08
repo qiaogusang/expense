@@ -4,8 +4,6 @@ server:
 spring:
   application:
     name: expense
-  thymeleaf:
-    cache: false
     
 management:
   endpoint:

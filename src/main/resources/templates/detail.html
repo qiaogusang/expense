@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>consume detail</title>
+<script th:src="@{/js/jquery-2.1.4.js}"></script>
+</head>
+
+<body>
+<p>
+<label th:text="${month} + '月度：' + ${total}"></label>
+<ul th:each="entry:${days}">
+	<li th:text="${entry.num} + '：' + ${entry.total}"></li>
+	<a href="javascript:;"  th:onclick="view([[${entry.path}]])">detail</a>
+</ul>
+</body>
+
+<script>
+function view(path){
+	$.ajax({
+        type:"get",
+        url:"http://localhost:8088/show/day?url="+path,
+        success:function(data){
+          window.alert(data); 
+        }
+    });
+}
+</script>
+</html>
